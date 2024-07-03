@@ -1,5 +1,11 @@
 !/bin/bash
 
+FOLDER=nubit-node
+mkdir $FOLDER/bin/
+tar -xvf nubit-node-linux-x86_64.tar
+mv nubit-node-linux-x86_64/bin/nubit $FOLDER/bin/nubit
+mv nubit-node-linux-x86_64/bin/nkey $FOLDER/bin/nkey
+
 NETWORK="nubit-alphatestnet-1"
 NODE_TYPE="light"
 VALIDATOR_IP="validator.nubit-alphatestnet-1.com"
