@@ -75,17 +75,6 @@ else
         echo "MD5 checking passed. Start directly"
     else
         echo "Installation of the latest version of nubit-node is required to ensure optimal performance and access to new features."
-        URL=https://nubit.sh/nubit-bin/$FILE
-        echo "Upgrading nubit-node ..."
-        echo "Download from URL, please do not close: $URL"
-        if command -v curl >/dev/null 2>&1; then
-            curl -sLO $URL
-            elif command -v wget >/dev/null 2>&1; then
-                wget -q $URL
-            else
-            echo "Neither curl nor wget are available. Please install one of these and try again"
-            exit 1
-        fi
         tar -xvf $FILE
         if [ ! -d $FOLDER ]; then
             mkdir $FOLDER
